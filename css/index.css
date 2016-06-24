@@ -1,0 +1,77 @@
+  body {
+  background-image: radial-gradient(rgb(41, 106, 212) 0%, rgb(78, 142, 247) 100%);
+  font: 400 1em/1.38 Montserrat;
+  color: #ffffff;
+  text-align: center;
+}
+
+.container {
+  margin: auto;
+  width: 600px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.location {
+  min-height: 59px;
+  font-size: 2.226em;
+  font-weight: 400;
+  line-height: 2.76;
+}
+
+
+.temperature {
+  font-size: 12.25em;
+  font-weight: 700;
+  float: left;
+  text-align: center;
+  height: 300px;
+  width: 300px;
+}
+.weathericon {
+  height: 300px;
+}
+
+.climate_bg {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.dropicon, .windicon {
+  width: 100px;
+}
+
+
+.hum-area, .wind-area {
+  width: 200px;
+}
+
+.hum-area {
+  float: left;
+  margin-left: 100px;
+}
+.wind-area {
+  float: right;
+  margin-right: 100px;
+}
+
+.genTable {
+  display: block;
+  margin-top: 200px;
+}
+
+
+.table-img {
+  height: 50px;
+}
+
+.highcharts-container {
+  opacity: 0.8;
+}
+
+#chart {
+  margin-top: 50px;
+}
