@@ -14,7 +14,7 @@
   left: 0px;
 }
 
-.location {
+.lokacja {
   min-height: 59px;
   font-size: 2.226em;
   font-weight: 400;
@@ -22,7 +22,7 @@
 }
 
 
-.temperature {
+.temperatura {
   font-size: 12.25em;
   font-weight: 700;
   float: left;
@@ -30,48 +30,51 @@
   height: 300px;
   width: 300px;
 }
-.weathericon {
+.ikona-pogoda {
   height: 300px;
 }
 
-.climate_bg {
+.img-pogoda {
   width: 300px;
   height: 300px;
   overflow: hidden;
 }
 
-.dropicon, .windicon {
+.ikona-wilgotnosc, .ikona-wiatr {
   width: 100px;
 }
 
 
-.hum-area, .wind-area {
+.wilgotnosc-info, .wiatr-info {
   width: 200px;
 }
 
-.hum-area {
+.wilgotnosc-info {
   float: left;
   margin-left: 100px;
 }
-.wind-area {
+.wiatr-info {
   float: right;
   margin-right: 100px;
 }
 
-.genTable {
+.tabela {
   display: block;
   margin-top: 200px;
 }
-
 
 .table-img {
   height: 50px;
 }
 
-.highcharts-container {
+#wykres {
+  margin-top: 50px;
+}
+
+.highcharts-background {
   opacity: 0.8;
 }
 
-#chart {
-  margin-top: 50px;
+.predkosc-wiatru, .wilgotnosc {
+  font-size: 1.5em;
 }
