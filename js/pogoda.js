@@ -1,6 +1,17 @@
+/*if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(success, error);
+} else {
+  error("Twoja przegladarka nie wspiera funkcji lokalizacji HTML5");
+}
+
+
+function error(msg){
+    alert(msg);
+}*/
 if ("geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition(function(position) {
-        wczytajPogode(position);
+        wczytajPogode(position.coords.latitude+','+position.coords.longitude);
+        addMap(position);
     });
 } else {
     alert("Twoja przegladarka nie wspiera funkcji lokalizacji HTML5");
@@ -8,7 +19,7 @@ if ("geolocation" in navigator) {
 
 function wczytajPogode (lokacja) {
     $.simpleWeather ({
-        location: location,
+        location: lokacja,
         unit: 'c',
         success: function (pogoda) {
             //dostęp do danych o pogodzie
@@ -16,11 +27,25 @@ function wczytajPogode (lokacja) {
             //przekazanie prognozy
             addTable(pogoda.forecast);
             addChart(pogoda.forecast);
+
         },
         error: function(error) {
             $(".error").html('<p>'+error+'</p>')
         }
     });
+}
+
+  function addMap (position) {
+    var szer  = position.coords.latitude;
+    var dlug = position.coords.longitude;
+
+    mapa.innerHTML = '<p>Szerokość geograficzna: ' + szer + '° <br>Długość geograficzna: ' + dlug + '°</p>';
+
+    var img = new Image();
+    img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + szer + "," + dlug + "&zoom=13&size=600x300&sensor=false";
+
+    mapa.appendChild(img);
+
 }
 
 function addInfo (pogoda) {
