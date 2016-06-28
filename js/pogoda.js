@@ -1,13 +1,3 @@
-/*if (navigator.geolocation) {
-  navigator.geolocation.getCurrentPosition(success, error);
-} else {
-  error("Twoja przegladarka nie wspiera funkcji lokalizacji HTML5");
-}
-
-
-function error(msg){
-    alert(msg);
-}*/
 if ("geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition(function(position) {
         wczytajPogode(position.coords.latitude+','+position.coords.longitude);
@@ -35,7 +25,7 @@ function wczytajPogode (lokacja) {
     });
 }
 
-  function addMap (position) {
+function addMap (position) {
     var szer  = position.coords.latitude;
     var dlug = position.coords.longitude;
 
